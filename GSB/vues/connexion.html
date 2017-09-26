@@ -1,0 +1,26 @@
+
+<ng-include src="'vues/logo.html'"></ng-include>
+
+<form class="col-lg-6" name="frmLogin" ng-submit="valider()">
+    <div class="form-group">
+        <label for="login">
+        	{{ ::lblLogin }}
+    	</label>
+        <input type="text" ng-model="login" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="mdp">
+            {{ lblMdp }}
+        </label> 
+        <input type="password" ng-model="mdp" class="form-control" />
+    </div>
+    <div class="alert alert-danger" ng-show="msgErreur">
+        {{ lblMsgErreur }}
+    </div>
+    <input type="submit" value="{{ ::lblSubmit }}">
+
+    {{ myUrl }}
+
+</form>
+
+
